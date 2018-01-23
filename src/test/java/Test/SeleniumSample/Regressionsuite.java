@@ -14,7 +14,6 @@ public class Regressionsuite {
 	@Test
 	public void testverifyTitle() {
 		
-		SS
 		System.setProperty("webdriver.chome.driver", "C:\\Users\\Nikam3\\eclipse-workspace\\SeleniumSample\\chromedriver.exe");
 		WebDriver dr = new ChromeDriver();
 		dr.get("https://www.google.com");
