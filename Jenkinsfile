@@ -1,10 +1,27 @@
-pipeline {
-    agent { docker 'maven:3.3.3' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
-    }
+pipeline{
+	stages{
+	
+		stage('complie stage'){
+				steps{
+					withMaven(maven: '3.5.2'){
+					mvn clean compile
+					}
+				}
+		
+		}
+		
+		stage('Testing stage'){
+				steps{
+					withMaven(maven: '3.5.2'){
+					mvn test
+					}
+				}
+		
+		}
+	
+	}
+	
+	
+	
+
 }
