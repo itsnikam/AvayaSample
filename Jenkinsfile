@@ -1,28 +1,21 @@
-pipeline{
-	agent any
-	stages{
-	
-		stage('complie stage'){
-				steps{
-					
-					sh 'mvn clean compile'
-					
-				}
-		
-		}
-		
-		stage('Testing stage'){
-				steps{
-					
-					sh 'mvn test'
-					
-				}
-		
-		}
-	
-	}
-	
-	
-	
+pipeline {
+    agent any
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
